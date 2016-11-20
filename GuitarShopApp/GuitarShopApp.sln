@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
-VisualStudioVersion = 14.0.25123.0
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GuitarShop.iOS", "GuitarShop\GuitarShop.iOS\GuitarShop.iOS.csproj", "{02DCF4F6-AB7C-420C-9155-F1298C92878F}"
 EndProject
@@ -200,6 +200,7 @@ Global
 		{3577458B-E36E-491D-8068-59B0CA24D7D6}.AppStore|x86.Build.0 = Release|x86
 		{3577458B-E36E-491D-8068-59B0CA24D7D6}.AppStore|x86.Deploy.0 = Release|x86
 		{3577458B-E36E-491D-8068-59B0CA24D7D6}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{3577458B-E36E-491D-8068-59B0CA24D7D6}.Debug|Any CPU.Deploy.0 = Debug|x86
 		{3577458B-E36E-491D-8068-59B0CA24D7D6}.Debug|ARM.ActiveCfg = Debug|ARM
 		{3577458B-E36E-491D-8068-59B0CA24D7D6}.Debug|ARM.Build.0 = Debug|ARM
 		{3577458B-E36E-491D-8068-59B0CA24D7D6}.Debug|ARM.Deploy.0 = Debug|ARM
