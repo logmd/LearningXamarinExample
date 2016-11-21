@@ -12,19 +12,22 @@ namespace GuitarShop
         public App()
         {
             // The root page of your application
-            MainPage = new ContentPage
+            var content = new ContentPage
             {
+                Title = "GuitarShop",
                 Content = new StackLayout
                 {
                     VerticalOptions = LayoutOptions.Center,
                     Children = {
                         new Label {
-                            XAlign = TextAlignment.Center,
+                            HorizontalTextAlignment = TextAlignment.Center,
                             Text = "Welcome to Xamarin Forms!"
                         }
                     }
                 }
             };
+
+            MainPage = new NavigationPage(content);
         }
 
         protected override void OnStart()
