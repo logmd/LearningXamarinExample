@@ -3,5 +3,30 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:templates="clr-namespace:GuitarShop.Layouts.Templates;assembly=GuitarShop"
              x:Class="GuitarShop.Layouts.Home.HomePage">
-  <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+  <!--<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />-->
+<ScrollView>
+  <StackLayout>
+    <ContentView HeightRequest="300" MinimumHeightRequest="300" BackgroundColor="Blue">
+      <Label TextColor="White">THIS IS MY LABEL!</Label>
+      <!--<StackLayout>
+        <Label Text="SOMETHING"></Label>
+      </StackLayout>-->
+    </ContentView>
+
+    <ContentView HeightRequest="200" MinimumHeightRequest="200" BackgroundColor="Green">
+      <Label TextColor="White">THIS IS MY LABEL!</Label>
+      <!--<StackLayout>
+        <Label Text="SOMETHING"></Label>
+      </StackLayout>-->
+    </ContentView>
+
+    <ContentView HeightRequest="500" MinimumHeightRequest="500" BackgroundColor="Red">
+      <Label TextColor="White">THIS IS MY LABEL!</Label>
+      <!--<StackLayout>
+        <Label Text="SOMETHING"></Label>
+      </StackLayout>-->
+    </ContentView>
+  </StackLayout>
+
+</ScrollView>
 </templates:DetailedContentPage>

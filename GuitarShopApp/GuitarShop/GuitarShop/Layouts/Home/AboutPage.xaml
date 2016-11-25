@@ -4,4 +4,9 @@
              xmlns:templates="clr-namespace:GuitarShop.Layouts.Templates;assembly=GuitarShop"
              x:Class="GuitarShop.Layouts.Home.AboutPage">
   <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
+  
+  <StackLayout>
+    <Label>Guitar Shop by Andre and LOGMD</Label>
+  </StackLayout>
+  
 </templates:DetailedContentPage>
