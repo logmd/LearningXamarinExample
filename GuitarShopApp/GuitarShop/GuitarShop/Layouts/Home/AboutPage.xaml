@@ -2,11 +2,11 @@
 <templates:DetailedContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:templates="clr-namespace:GuitarShop.Layouts.Templates;assembly=GuitarShop"
-             x:Class="GuitarShop.Layouts.Home.AboutPage">
+             x:Class="GuitarShop.Layouts.Home.AboutPage"  >
   <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
   
-  <StackLayout>
-    <Label>Guitar Shop by Andre and LOGMD</Label>
+  <StackLayout >
+    <Label TextColor="{StaticResource NormalTextColor}">Guitar Shop by Andre and LOGMD</Label>
   </StackLayout>
   
 </templates:DetailedContentPage>
