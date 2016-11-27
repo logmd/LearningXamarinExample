@@ -1,32 +1,47 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+﻿<?xml version="1.0" encoding="utf-8"?>
+
 <templates:DetailedContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:templates="clr-namespace:GuitarShop.Layouts.Templates;assembly=GuitarShop"
-             x:Class="GuitarShop.Layouts.Home.HomePage">
-  <!--<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />-->
-<ScrollView>
-  <StackLayout>
-    <ContentView HeightRequest="300" MinimumHeightRequest="300" BackgroundColor="Blue">
-      <Label TextColor="White">THIS IS MY LABEL!</Label>
-      <!--<StackLayout>
-        <Label Text="SOMETHING"></Label>
-      </StackLayout>-->
-    </ContentView>
+                               xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                               xmlns:templates="clr-namespace:GuitarShop.Layouts.Templates;assembly=GuitarShop"
+                               x:Class="GuitarShop.Layouts.Home.HomePage">
+    <!--<Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />-->
+    <ScrollView BackgroundColor="{StaticResource MPrimary200}">
+        <StackLayout>
+            <ContentView MinimumHeightRequest="100" BackgroundColor="{StaticResource MPrimary500}">
 
-    <ContentView HeightRequest="200" MinimumHeightRequest="200" BackgroundColor="Green">
-      <Label TextColor="White">THIS IS MY LABEL!</Label>
-      <!--<StackLayout>
-        <Label Text="SOMETHING"></Label>
-      </StackLayout>-->
-    </ContentView>
+                <StackLayout Padding="10" Orientation="Horizontal">
+                    <StackLayout Padding="5">
+                        <Label TextColor="{StaticResource MPrimaryTextLight}" FontSize="20">Welcome to AA Guitar Shop!</Label>
+                        <Label TextColor="{StaticResource MSecondaryTextLight}" LineBreakMode="WordWrap">
+                            Get all the latest and best guitars from our store. We promise we will try not to rip you off! (at least we tried). Feel free to pay on finance on our 0% for 7 months and 1 day and 2 hour plan!
+                        </Label>
+                    </StackLayout>
+                    <ContentView>
+                        <Image x:Name="GuitarShopIcon" />
+                    </ContentView>
+                </StackLayout>
 
-    <ContentView HeightRequest="500" MinimumHeightRequest="500" BackgroundColor="Red">
-      <Label TextColor="White">THIS IS MY LABEL!</Label>
-      <!--<StackLayout>
-        <Label Text="SOMETHING"></Label>
-      </StackLayout>-->
-    </ContentView>
-  </StackLayout>
+            </ContentView>
+          <StackLayout Padding="15" Spacing="10">
+            <ContentView HeightRequest="150" MinimumHeightRequest="150" BackgroundColor="White">
+              <StackLayout Padding="10">
+                <Label TextColor="{StaticResource MPrimary900}" FontSize="15">Voted best this week!</Label>
+                <Label TextColor="{StaticResource MPrimary500}" LineBreakMode="WordWrap">
+                  Sample Card Data for AA Guitar Shop 1
+                </Label>
+              </StackLayout>
+            </ContentView>
+            <ContentView HeightRequest="150" MinimumHeightRequest="150" BackgroundColor="White">
+              <StackLayout Padding="10">
+                <Label TextColor="{StaticResource MPrimary900}" FontSize="15">Voted best this week!</Label>
+                <Label TextColor="{StaticResource MPrimary500}" LineBreakMode="WordWrap">
+                  Sample Card Data for AA Guitar Shop 2
+                </Label>
+              </StackLayout>
+            </ContentView>
+          </StackLayout>
 
-</ScrollView>
+        </StackLayout>
+
+    </ScrollView>
 </templates:DetailedContentPage>

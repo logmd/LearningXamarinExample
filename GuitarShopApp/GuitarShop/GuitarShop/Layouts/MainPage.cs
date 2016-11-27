@@ -21,6 +21,7 @@ namespace GuitarShop.Layouts
             {
                 Master.Icon = "swap.png";
             }
+
         }
 
         void OnItemSelected(object sender, SelectedItemChangedEventArgs e)

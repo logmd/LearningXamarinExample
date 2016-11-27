@@ -7,9 +7,10 @@ namespace GuitarShop
     {
         public App()
         {
+            InitializeComponent();
+
             // The root page of your application
             MainPage = new MainPage();
-            InitializeComponent();
         }
 
         //protected override void OnStart()

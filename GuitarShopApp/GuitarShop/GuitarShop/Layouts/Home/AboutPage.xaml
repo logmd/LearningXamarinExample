@@ -6,7 +6,7 @@
   <Label Text="{Binding MainText}" VerticalOptions="Center" HorizontalOptions="Center" />
   
   <StackLayout >
-    <Label TextColor="{StaticResource NormalTextColor}">Guitar Shop by Andre and LOGMD</Label>
+    <Label >Guitar Shop by Andre and LOGMD</Label>
   </StackLayout>
   
 </templates:DetailedContentPage>
