@@ -5,7 +5,7 @@ using System.Text;
 
 using Xamarin.Forms;
 
-namespace GuitarShop
+namespace MainApplication
 {
     public class App : Application
     {
@@ -14,7 +14,7 @@ namespace GuitarShop
             // The root page of your application
             var content = new ContentPage
             {
-                Title = "GuitarShop",
+                Title = "MainApplication",
                 Content = new StackLayout
                 {
                     VerticalOptions = LayoutOptions.Center,

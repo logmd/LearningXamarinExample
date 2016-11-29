@@ -35,10 +35,6 @@
   </PropertyGroup>
   <ItemGroup>
     <!-- A reference to the entire .NET Framework is automatically included -->
-    <ProjectReference Include="..\DataContracts\DataContracts.csproj">
-      <Project>{fe8d556c-0dc8-4369-b768-86cd20f005f7}</Project>
-      <Name>DataContracts</Name>
-    </ProjectReference>
     <ProjectReference Include="..\Infrastructure\Infrastructure.csproj">
       <Project>{8f874e11-6237-402e-a3a2-683febf04023}</Project>
       <Name>Infrastructure</Name>
@@ -46,10 +42,6 @@
     <ProjectReference Include="..\Repository\Repository.csproj">
       <Project>{4b1dbe42-9cb4-48af-8c7b-bef5626a7946}</Project>
       <Name>Repository</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\ServiceContract\ServiceContract.csproj">
-      <Project>{f6677fa9-a2a9-47d5-b16c-61034fd4dcd1}</Project>
-      <Name>ServiceContract</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

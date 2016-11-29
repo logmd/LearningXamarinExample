@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ServiceContract
+namespace GuitarApp.Infrastructure.Domain
 {
-    public interface IProducService
+    public interface IAggregateRoot
     {
     }
 }

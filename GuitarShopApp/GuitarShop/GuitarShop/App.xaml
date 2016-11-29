@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            x:Class="GuitarShop.App">
+  <Application.Resources>
+    <ResourceDictionary>
+      
+      <Color x:Key="MPrimary200">#90CAF9</Color>
+      <Color x:Key="MPrimary500">#2196F3</Color>
+      <Color x:Key="MPrimary900">#0D47A1</Color>
+
+      <Color x:Key="MSecondary200">#FFCC80</Color>
+      <Color x:Key="MSecondary500">#FF9800</Color>
+      <Color x:Key="MSecondary900">#FF6F00</Color>
+      
+      <Color x:Key="MPrimaryTextLight">#FFFFFFFF</Color>
+      <Color x:Key="MSecondaryTextLight">#B3FFFFFF</Color>
+      <Color x:Key="MDisabledTextLight">#80FFFFFF</Color>
+      
+    </ResourceDictionary>
+  </Application.Resources>
+</Application>
