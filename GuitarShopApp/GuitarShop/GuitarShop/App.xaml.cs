@@ -13,10 +13,11 @@ namespace GuitarShop
             MainPage = new MainPage();
         }
 
-        //protected override void OnStart()
-        //{
-        //    // Handle when your app starts
-        //}
+        protected override void OnStart()
+        {
+            DependencyService.Register<AppSetup>();
+            _container = DependencyService.Get<AppSetup>().Container;
+        }
 
         //protected override void OnSleep()
         //{
