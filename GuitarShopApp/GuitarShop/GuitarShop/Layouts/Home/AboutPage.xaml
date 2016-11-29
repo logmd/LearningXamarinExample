@@ -7,6 +7,15 @@
   
   <StackLayout >
     <Label >Guitar Shop by Andre and LOGMD</Label>
+    <ContentView>
+      <StackLayout>
+        <Label>Name</Label>
+        <Label x:Name="productName">INFO</Label>
+        <Label>Price</Label>
+        <Label x:Name="productPrice">INFO</Label>
+      </StackLayout>  
+    </ContentView>
+  
   </StackLayout>
   
 </templates:DetailedContentPage>

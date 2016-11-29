@@ -118,6 +118,7 @@ namespace GuitarShop.Service
                 response.ErrorMessage = ex.Message;
             }
 
+            response.Products = productList;
             return response;
         }
 

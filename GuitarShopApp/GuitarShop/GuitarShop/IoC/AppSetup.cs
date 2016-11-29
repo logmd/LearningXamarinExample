@@ -5,6 +5,7 @@ using GuitarShop.DAL;
 using GuitarShop.Service;
 using GuitarShop.Service.ServiceContract;
 using GuitarShop.Service.ThirdParty;
+using Xamarin.Forms;
 
 namespace GuitarShop.IoC
 {
@@ -23,7 +24,7 @@ namespace GuitarShop.IoC
         {
             // Services
             cb.RegisterType<ProductService>().As<IProductService>().SingleInstance();
-            cb.RegisterType<UnitOfWork>().As<IUnitOfWork>().SingleInstance();
+            cb.RegisterType<UnitOfWork>().As<IUnitOfWork>().SingleInstance().WithParameter("sqlLite",DependencyService.Get<ISQLite>());
 
             cb.RegisterType<InventoryFacade>().As<IInventoryFacade>().SingleInstance();
             cb.RegisterType<InventoryService>().As<IInventoryService>().SingleInstance();

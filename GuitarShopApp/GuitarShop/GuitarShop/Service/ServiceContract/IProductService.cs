@@ -1,10 +1,5 @@
 ﻿using GuitarShop.Service.DataContracts.Requests;
 using GuitarShop.Service.DataContracts.Responses;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace GuitarShop.Service.ServiceContract
 {

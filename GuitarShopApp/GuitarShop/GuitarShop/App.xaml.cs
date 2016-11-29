@@ -20,7 +20,9 @@ namespace GuitarShop
         protected override void OnStart()
         {
             DependencyService.Register<AppSetup>();
-            Container = DependencyService.Get<AppSetup>().Container;
+            var setup = DependencyService.Get<AppSetup>();
+            setup.CreateContainer();
+            Container = setup.Container;
         }
 
         //}
