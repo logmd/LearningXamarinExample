@@ -1,9 +1,11 @@
-﻿using GuitarShop.Layouts;
+﻿using Autofac;
+using GuitarShop.IoC;
+using GuitarShop.Layouts;
 using Xamarin.Forms;
 
 namespace GuitarShop
 {
-    public partial class App: global::Xamarin.Forms.Application
+    public partial class App
     {
         public App()
         {
@@ -13,16 +15,19 @@ namespace GuitarShop
             MainPage = new MainPage();
         }
 
+        public IContainer Container { get; private set; }
+
         protected override void OnStart()
         {
             DependencyService.Register<AppSetup>();
-            _container = DependencyService.Get<AppSetup>().Container;
+            Container = DependencyService.Get<AppSetup>().Container;
         }
 
-        //protected override void OnSleep()
-        //{
-        //    // Handle when your app sleeps
         //}
+        //    // Handle when your app sleeps
+        //{
+
+        //protected override void OnSleep()
 
         //protected override void OnResume()
         //{

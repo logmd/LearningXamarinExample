@@ -1,20 +1,17 @@
-﻿using GuitarShop.BusinessObjects;
-using GuitarShop.Infrastructure.UnitOfWork;
-using SQLite;
-using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using GuitarApp.Infrastructure.Domain;
+using GuitarApp.Infrastructure.UnitOfWork;
+using GuitarShop.BusinessObjects;
+using SQLite;
 using Xamarin.Forms;
-using GuitarShop.Infrastructure.Domain;
 
 namespace GuitarShop.DAL
 {
-    public class ProductFavouriteRepository : IRepository<Favourite,int>, IUnitOfWorkRepository
+    public class ProductFavouriteRepository : IRepository<Favourite, int>, IUnitOfWorkRepository
     {
-        private SQLiteConnection _database;
-        private IUnitOfWork _unitOfWork;
+        private readonly SQLiteConnection _database;
+        private readonly IUnitOfWork _unitOfWork;
 
         public ProductFavouriteRepository(IUnitOfWork unitOfWork)
         {

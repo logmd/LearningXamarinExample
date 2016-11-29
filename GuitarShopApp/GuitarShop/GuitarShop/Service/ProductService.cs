@@ -1,28 +1,25 @@
-﻿using GuitarShop.BusinessObjects;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using GuitarApp.Infrastructure.UnitOfWork;
+using GuitarShop.BusinessObjects;
 using GuitarShop.DAL;
-using GuitarShop.Infrastructure.UnitOfWork;
 using GuitarShop.Service.DataContracts.DTO;
 using GuitarShop.Service.DataContracts.Requests;
 using GuitarShop.Service.DataContracts.Responses;
+using GuitarShop.Service.Extensions;
 using GuitarShop.Service.ServiceContract;
 using GuitarShop.Service.ThirdParty;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Xamarin.Forms;
-using GuitarShop.Service.Extensions;
 
 namespace GuitarShop.Service
 {
     public class ProductService : IProductService
     {
-        private IRepository<Favourite,int> _repository;
-        private IUnitOfWork _unitOfWork;
-        private IInventoryFacade _inventory;
+        private readonly IInventoryFacade _inventory;
+        private readonly IRepository<Favourite, int> _repository;
+        private readonly IUnitOfWork _unitOfWork;
 
-        public ProductService(IRepository<Favourite,int> repository, IUnitOfWork unitOfWork, IInventoryFacade inventory)
+        public ProductService(IRepository<Favourite, int> repository, IUnitOfWork unitOfWork, IInventoryFacade inventory)
         {
             _repository = repository;
             _unitOfWork = unitOfWork;
@@ -37,7 +34,7 @@ namespace GuitarShop.Service
             {
                 var favourite = new Favourite
                 {
-                    ProductNumber = request.ProductNumber,
+                    ProductNumber = request.ProductNumber
                 };
 
                 _repository.Add(favourite);
@@ -60,7 +57,7 @@ namespace GuitarShop.Service
             {
                 var favourite = new Favourite
                 {
-                    ProductNumber = request.ProductNumber,
+                    ProductNumber = request.ProductNumber
                 };
 
                 _repository.Remove(favourite);
@@ -85,16 +82,13 @@ namespace GuitarShop.Service
                 var favourites = _repository.FindAll();
                 var products = _inventory.GetAllProducts();
 
-                foreach(var favourite in favourites)
+                foreach (var favourite in favourites)
                 {
                     var product = products.FirstOrDefault(p => p.ProductNumber == favourite.ProductNumber);
 
                     if (product != null)
-                    {
                         favouriteList.Add(product.ConvertToListProductDTOFromProduct());
-                    }
                 }
-
             }
             catch (Exception ex)
             {
@@ -116,9 +110,7 @@ namespace GuitarShop.Service
                 var products = _inventory.GetAllProducts();
 
                 foreach (var product in products)
-                {
                     productList.Add(product.ConvertToListProductDTOFromProduct());
-                }
             }
             catch (Exception ex)
             {
