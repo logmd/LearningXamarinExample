@@ -9,8 +9,8 @@ namespace GuitarShop.Service.ThirdParty
 {
     public interface IInventoryFacade
     {
-        Product GetProductByProductNumber(int productNumber);
+        Task<Product> GetProductByProductNumber(int productNumber);
 
-        IEnumerable<Product> GetAllProducts();
+        Task<IEnumerable<Product>> GetAllProducts();
     }
 }

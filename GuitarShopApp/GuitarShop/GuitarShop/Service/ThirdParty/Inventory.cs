@@ -14,7 +14,7 @@ namespace GuitarShop.Service.ThirdParty
             {
                 new InventoryItem
                 {
-                    IventoryId = 1,
+                    Id = "1",
                     Name = "Ibanez UV70P-BK Black",
                     Description = "Steve Vai is one of the revered few on that short list of players who have changed " +
                     "the way we all think about what a guitar can really do. His signature Ibanez guitars are no different: " +
@@ -36,7 +36,7 @@ namespace GuitarShop.Service.ThirdParty
                 },
                 new InventoryItem
                 {
-                    IventoryId = 2,
+                    Id = "2",
                     Name = "Ibanez RGDIX6MRW-CBF",
                     Description = "The new RGD Iron Label series offers a new type of body construction, never before featured on a RGD model. " + 
                     "An Exotic wood top sits above a natural finish Ash body, capturing the highly sought-after 'layered body' look that is popular " + 

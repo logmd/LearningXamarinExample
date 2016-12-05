@@ -8,7 +8,7 @@ namespace GuitarShop.Service.ThirdParty
 {
     public class InventoryItem
     {
-        public int IventoryId { get; set; }
+        public string Id { get; set; }
 
         public string Name { get; set; }
 

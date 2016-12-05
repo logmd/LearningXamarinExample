@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using GuitarApp.Infrastructure.UnitOfWork;
 using GuitarShop.BusinessObjects;
 using GuitarShop.DAL;
@@ -26,7 +27,7 @@ namespace GuitarShop.Service
             _inventory = inventory;
         }
 
-        public AddFavouriteProductResponse AddFavouriteProduct(AddFavouriteProductRequest request)
+        public async Task<AddFavouriteProductResponse> AddFavouriteProduct(AddFavouriteProductRequest request)
         {
             var response = new AddFavouriteProductResponse();
 
@@ -46,10 +47,10 @@ namespace GuitarShop.Service
                 response.ErrorMessage = ex.Message;
             }
 
-            return response;
+            return await Task.FromResult(response);
         }
 
-        public DeleteFavouriteProductResponse DeleteFavouriteProduct(DeleteFavouriteProductRequest request)
+        public async Task<DeleteFavouriteProductResponse> DeleteFavouriteProduct(DeleteFavouriteProductRequest request)
         {
             var response = new DeleteFavouriteProductResponse();
 
@@ -69,10 +70,10 @@ namespace GuitarShop.Service
                 response.ErrorMessage = ex.Message;
             }
 
-            return response;
+            return await Task.FromResult(response);
         }
 
-        public GetAllFavouriteProductsResponse GetAllFavouriteProducts(GetAllFavouriteProductsRequest request)
+        public async Task<GetAllFavouriteProductsResponse> GetAllFavouriteProducts(GetAllFavouriteProductsRequest request)
         {
             var response = new GetAllFavouriteProductsResponse();
             var favouriteList = new List<ListProductDTO>();
@@ -80,7 +81,7 @@ namespace GuitarShop.Service
             try
             {
                 var favourites = _repository.FindAll();
-                var products = _inventory.GetAllProducts();
+                var products = await _inventory.GetAllProducts();
 
                 foreach (var favourite in favourites)
                 {
@@ -100,14 +101,14 @@ namespace GuitarShop.Service
             return response;
         }
 
-        public GetAllProductsResponse GetAllProducts(GetAllProductsRequest request)
+        public async Task<GetAllProductsResponse> GetAllProducts(GetAllProductsRequest request)
         {
             var response = new GetAllProductsResponse();
             var productList = new List<ListProductDTO>();
 
             try
             {
-                var products = _inventory.GetAllProducts();
+                var products = await _inventory.GetAllProducts();
 
                 foreach (var product in products)
                     productList.Add(product.ConvertToListProductDTOFromProduct());
@@ -122,13 +123,13 @@ namespace GuitarShop.Service
             return response;
         }
 
-        public GetProductDetailsResponse GetProductDetails(GetProductDetailsRequest request)
+        public async Task<GetProductDetailsResponse> GetProductDetails(GetProductDetailsRequest request)
         {
             var response = new GetProductDetailsResponse();
 
             try
             {
-                var product = _inventory.GetProductByProductNumber(request.ProductNumber);
+                var product = await _inventory.GetProductByProductNumber(request.ProductNumber);
                 response.Product = product.ConvertToProductDTOFromProduct();
             }
             catch (Exception ex)

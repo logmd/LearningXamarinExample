@@ -15,7 +15,8 @@ namespace GuitarShop.Service.ThirdParty
 
         public InventoryItem GetById(int id)
         {
-            return Inventory.GetAllItems().FirstOrDefault(item => item.IventoryId == id);
+            var idStr = id.ToString();
+            return Inventory.GetAllItems().FirstOrDefault(item => item.Id.Equals(idStr));
         }
     }
 }
