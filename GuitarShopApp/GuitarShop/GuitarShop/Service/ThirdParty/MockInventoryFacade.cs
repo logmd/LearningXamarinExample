@@ -19,35 +19,35 @@ namespace GuitarShop.Service.ThirdParty
             _service = service;
         }
 
-        public Product GetProductByProductNumber(int productNumber)
+        public Task<Product> GetProductByProductNumber(int productNumber)
         {
             var item = _service.GetById(productNumber);
 
-            return new Product
+            return Task.FromResult(new Product
             {
-                ProductNumber = item.IventoryId,
+                ProductNumber = Int32.Parse(item.Id),
                 ProductName = item.Name,
                 Price = item.Price,
                 Quantity = item.Quantity,
                 Description = item.Description,
                 Features = item.Features,
                 ImageUrl = item.ImageUrl
-            };
+            });
         }
 
-        public IEnumerable<Product> GetAllProducts()
+        public Task<IEnumerable<Product>> GetAllProducts()
         {
-            return _service.GetAll()
+            return Task.FromResult(_service.GetAll()
                 .Select(i => new Product
                 {
-                    ProductNumber = i.IventoryId,
+                    ProductNumber = Int32.Parse(i.Id),
                     ProductName = i.Name,
                     Price = i.Price,
                     Quantity = i.Quantity,
                     Description = i.Description,
                     Features = i.Features,
                     ImageUrl = i.ImageUrl
-                });
+                }));
         }
     }
 }

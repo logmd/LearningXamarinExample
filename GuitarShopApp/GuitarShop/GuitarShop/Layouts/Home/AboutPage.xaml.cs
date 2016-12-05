@@ -17,6 +17,13 @@ namespace GuitarShop.Layouts.Home
             InitializeComponent();
 
             Title = "About";
+            
+        }
+
+        protected async override void OnAppearing()
+        {
+            base.OnAppearing();
+
             try
             {
 
@@ -24,7 +31,7 @@ namespace GuitarShop.Layouts.Home
 
                 var service = setup.Container.Resolve<IProductService>();
 
-                var result = service.GetAllProducts(new GetAllProductsRequest());
+                var result = await service.GetAllProducts(new GetAllProductsRequest());
 
                 var product = result?.Products.First();
 

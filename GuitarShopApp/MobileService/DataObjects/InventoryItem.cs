@@ -8,6 +8,8 @@ namespace MobileService.DataObjects
 {
     public class InventoryItem : EntityData
     {
+        public string Id { get; set; }
+
         public string Name { get; set; }
 
         public decimal Price { get; set; }
@@ -16,7 +18,7 @@ namespace MobileService.DataObjects
 
         public string Description { get; set; }
 
-        public IEnumerable<string> Features { get; set; }
+        public IEnumerable<Feature> Features { get; set; }
 
         public string ImageUrl { get; set; }
     }

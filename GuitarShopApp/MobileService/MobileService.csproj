@@ -223,8 +223,11 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\InventoryItemController.cs" />
     <Compile Include="Controllers\TodoItemController.cs" />
+    <Compile Include="DataObjects\Feature.cs" />
     <Compile Include="DataObjects\InventoryItem.cs" />
     <Compile Include="DataObjects\TodoItem.cs" />
+    <Compile Include="Models\Inventory.cs" />
+    <Compile Include="Models\MobileServiceInitializer.cs" />
     <Compile Include="Models\MobileServiceContext.cs" />
     <Compile Include="ScheduledJobs\SampleJob.cs" />
     <Compile Include="Global.asax.cs">

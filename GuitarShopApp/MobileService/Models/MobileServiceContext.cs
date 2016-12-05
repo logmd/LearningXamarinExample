@@ -1,5 +1,9 @@
-﻿using System.Data.Entity;
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Data.Entity.Infrastructure;
 using System.Data.Entity.ModelConfiguration.Conventions;
+using System.Data.Entity.Validation;
 using System.Linq;
 using Microsoft.WindowsAzure.Mobile.Service;
 using Microsoft.WindowsAzure.Mobile.Service.Tables;
@@ -30,6 +34,8 @@ namespace MobileService.Models
         public DbSet<TodoItem> TodoItems { get; set; }
 
         public DbSet<InventoryItem> InventoryItems { get; set; }
+
+        public DbSet<Feature> Features { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
