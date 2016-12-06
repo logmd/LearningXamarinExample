@@ -1,15 +1,10 @@
-﻿using Microsoft.WindowsAzure.Mobile.Service;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
+﻿using System.Collections.Generic;
+using Microsoft.Azure.Mobile.Server;
 
 namespace MobileService.DataObjects
 {
     public class InventoryItem : EntityData
     {
-        public string Id { get; set; }
-
         public string Name { get; set; }
 
         public decimal Price { get; set; }

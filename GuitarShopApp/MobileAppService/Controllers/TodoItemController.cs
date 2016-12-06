@@ -3,21 +3,24 @@ using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.OData;
+using System.Web.Routing;
 using Microsoft.Azure.Mobile.Server;
-using MobileService.DataObjects;
-using MobileService.Models;
+using MobileAppService.DataObjects;
+using MobileAppService.Models;
 
-namespace MobileService.Controllers
+namespace MobileAppService.Controllers
 {
+    [RoutePrefix("api")]
     public class TodoItemController : TableController<TodoItem>
     {
         protected override void Initialize(HttpControllerContext controllerContext)
         {
             base.Initialize(controllerContext);
             MobileServiceContext context = new MobileServiceContext();
-            DomainManager = new EntityDomainManager<TodoItem>(context, Request, Services);
+            DomainManager = new EntityDomainManager<TodoItem>(context, Request);
         }
-
+        
+        [Route("shit")]
         // GET tables/TodoItem
         public IQueryable<TodoItem> GetAllTodoItems()
         {

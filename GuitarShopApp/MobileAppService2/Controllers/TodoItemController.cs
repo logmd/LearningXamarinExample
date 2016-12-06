@@ -4,10 +4,10 @@ using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.OData;
 using Microsoft.Azure.Mobile.Server;
-using MobileService.DataObjects;
-using MobileService.Models;
+using MobileAppService2.DataObjects;
+using MobileAppService2.Models;
 
-namespace MobileService.Controllers
+namespace MobileAppService2.Controllers
 {
     public class TodoItemController : TableController<TodoItem>
     {
@@ -15,7 +15,7 @@ namespace MobileService.Controllers
         {
             base.Initialize(controllerContext);
             MobileServiceContext context = new MobileServiceContext();
-            DomainManager = new EntityDomainManager<TodoItem>(context, Request, Services);
+            DomainManager = new EntityDomainManager<TodoItem>(context, Request);
         }
 
         // GET tables/TodoItem
