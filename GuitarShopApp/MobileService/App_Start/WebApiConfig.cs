@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Data.Entity;
+﻿using System.Data.Entity;
+using System.EnterpriseServices;
 using System.Web.Http;
-using MobileService.DataObjects;
 using MobileService.Models;
-using Microsoft.WindowsAzure.Mobile.Service;
 
 namespace MobileService
 {
@@ -27,4 +23,3 @@ namespace MobileService
         }
     }
 }
-

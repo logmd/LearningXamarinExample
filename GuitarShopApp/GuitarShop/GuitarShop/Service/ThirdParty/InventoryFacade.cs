@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using GuitarShop.BusinessObjects;
 using Microsoft.WindowsAzure.MobileServices;
@@ -15,6 +14,7 @@ namespace GuitarShop.Service.ThirdParty
         public InventoryFacade()
         {
             _client = new MobileServiceClient(@"http://localhost:54619/");
+            //var client = new MobileServiceClient("https://xxx.azurewebsites.net", new MyHandler());
         }
 
         public async Task<IEnumerable<Product>> GetAllProducts()

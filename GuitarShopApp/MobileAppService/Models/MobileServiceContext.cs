@@ -1,10 +1,11 @@
-﻿using System.Data.Entity;
+using System.Data.Entity;
 using System.Data.Entity.ModelConfiguration.Conventions;
 using System.Linq;
+using Microsoft.Azure.Mobile.Server;
 using Microsoft.Azure.Mobile.Server.Tables;
-using MobileService.DataObjects;
+using MobileAppService.DataObjects;
 
-namespace MobileService.Models
+namespace MobileAppService.Models
 {
     public class MobileServiceContext : DbContext
     {
@@ -27,16 +28,8 @@ namespace MobileService.Models
 
         public DbSet<TodoItem> TodoItems { get; set; }
 
-        public DbSet<InventoryItem> InventoryItems { get; set; }
-
-        public DbSet<Feature> Features { get; set; }
-
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            string schema = ServiceSettingsDictionary.GetSchemaName();
-            if (!string.IsNullOrEmpty(schema))
-                modelBuilder.HasDefaultSchema(schema);
-
             modelBuilder.Conventions.Add(
                 new AttributeToColumnAnnotationConvention<TableColumnAttribute, string>(
                     "ServiceTableColumn", (property, attributes) => attributes.Single().ColumnType.ToString()));

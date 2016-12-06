@@ -1,6 +1,5 @@
 ﻿using System.Threading.Tasks;
 using System.Web.Http;
-using Microsoft.WindowsAzure.Mobile.Service;
 
 namespace MobileService.ScheduledJobs
 {
