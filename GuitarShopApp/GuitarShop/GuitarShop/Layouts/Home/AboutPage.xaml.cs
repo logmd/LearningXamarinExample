@@ -20,7 +20,7 @@ namespace GuitarShop.Layouts.Home
             
         }
 
-        protected async override void OnAppearing()
+        protected override async void OnAppearing()
         {
             base.OnAppearing();
 
