@@ -13,6 +13,7 @@ namespace MobileAppService
             // Use the custom ApiExplorer that applies constraints. This prevents
             // duplicate routes on /api and /tables from showing in the Swagger doc.
             config.Services.Replace(typeof(IApiExplorer), new MobileAppApiExplorer(config));
+            
             config
                .EnableSwagger(c =>
                {

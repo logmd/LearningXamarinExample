@@ -21,17 +21,17 @@ namespace GuitarShop.Service.ThirdParty
                     "Iconic, Sublime, Awe-Inspiring, Outrageous. The Ibanez JEM/UV Series models are designed to break boundaries.",
                     Price = 1179.00M,
                     Quantity = 3,
-                    Features = new List<string>
-                    {
-                        "Wizard-7 5pc Maple/Walnut neck w/KTS™ TITANIUM rods",
-                        "American Basswood body",
-                        "Jumbo frets w/Premium fret edge treatment",
-                        "Rosewood fretboard w/Green dot inlay",
-                        "Edge-Zero II bridge",
-                        "Cosmo black hardware",
-                        "DiMarzio® Blaze™ pus",
-                        "Hardshell case included"
-                    },
+                    //Features = new List<string>
+                    //{
+                    //    "Wizard-7 5pc Maple/Walnut neck w/KTS™ TITANIUM rods",
+                    //    "American Basswood body",
+                    //    "Jumbo frets w/Premium fret edge treatment",
+                    //    "Rosewood fretboard w/Green dot inlay",
+                    //    "Edge-Zero II bridge",
+                    //    "Cosmo black hardware",
+                    //    "DiMarzio® Blaze™ pus",
+                    //    "Hardshell case included"
+                    //},
                     ImageUrl = @"http://cdn.mos.musicradar.com/images/Guitarist/369/ibanez-uv70p-630-80.jpg"
                 },
                 new InventoryItem
@@ -47,19 +47,19 @@ namespace GuitarShop.Service.ThirdParty
                     "technical riffs and runs.Extra - deep cutaways grant comfortable access to the neck's highest notes.",
                     Price = 579.00M,
                     Quantity = 7,
-                    Features = new List<string>
-                    {
-                        "Neck type:  Nitro Wizard 3pc Maple/Bubinga neck",
-                        "Body:  Rosewood top/Layered Ash body",
-                        "Fretboard:  Birdseye Maple fretboard",
-                        "Fret:  Jumbo frets",
-                        "Bridge:  Gibraltar Standard II bridge",
-                        "Neck pickup:  DiMarzio® Fusion Edge (H) neck pickup",
-                        "Bridge pickup:  DiMarzio® Fusion Edge (H) bridge pickup",
-                        "Tuners:  Gotoh Locking",
-                        "Hardware color:  Black",
-                        "Factory tuning:  1D, 2A, 3F, 4C, 5G, 6D"
-                    },
+                    //Features = new List<string>
+                    //{
+                    //    "Neck type:  Nitro Wizard 3pc Maple/Bubinga neck",
+                    //    "Body:  Rosewood top/Layered Ash body",
+                    //    "Fretboard:  Birdseye Maple fretboard",
+                    //    "Fret:  Jumbo frets",
+                    //    "Bridge:  Gibraltar Standard II bridge",
+                    //    "Neck pickup:  DiMarzio® Fusion Edge (H) neck pickup",
+                    //    "Bridge pickup:  DiMarzio® Fusion Edge (H) bridge pickup",
+                    //    "Tuners:  Gotoh Locking",
+                    //    "Hardware color:  Black",
+                    //    "Factory tuning:  1D, 2A, 3F, 4C, 5G, 6D"
+                    //},
                     ImageUrl = @"http://www.rattleanddrum.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/i/b/ibanezrgdix6mrw.jpg"
                 }
             };
