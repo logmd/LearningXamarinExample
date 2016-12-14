@@ -18,7 +18,7 @@ namespace GuitarShop.Service.ThirdParty
 
         public string Description { get; set; }
 
-        public IEnumerable<string> Features { get; set; }
+        //public IEnumerable<string> Features { get; set; }
 
         public string ImageUrl { get; set; }
     }

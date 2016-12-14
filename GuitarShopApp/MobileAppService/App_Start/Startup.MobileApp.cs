@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Configuration;
 using System.Data.Entity;
 using System.Web.Http;
+using System.Web.Http.Routing;
 using Microsoft.Azure.Mobile.Server;
 using Microsoft.Azure.Mobile.Server.Authentication;
 using Microsoft.Azure.Mobile.Server.Config;
@@ -17,6 +18,8 @@ namespace MobileAppService
         public static void ConfigureMobileApp(IAppBuilder app)
         {
             HttpConfiguration config = new HttpConfiguration();
+
+            config.Routes.Add("mainApi",new HttpRoute("api/{controller}/{id}"));
 
             new MobileAppConfiguration()
                 .UseDefaultConfiguration()
