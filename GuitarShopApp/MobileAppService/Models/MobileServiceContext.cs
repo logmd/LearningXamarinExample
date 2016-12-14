@@ -26,7 +26,9 @@ namespace MobileAppService.Models
         {
         }
 
-        public DbSet<TodoItem> TodoItems { get; set; }
+        //public DbSet<TodoItem> TodoItems { get; set; }
+
+        public DbSet<InventoryItem> InventoryItems { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {

@@ -13,12 +13,14 @@ namespace GuitarShop.Service.ThirdParty
 
         public InventoryFacade()
         {
-            _client = new MobileServiceClient(@"http://localhost:54619/");
+            _client = new MobileServiceClient(@"http://172.20.10.4:5003");
+            //_client.InvokeApiAsync()
             //var client = new MobileServiceClient("https://xxx.azurewebsites.net", new MyHandler());
         }
 
         public async Task<IEnumerable<Product>> GetAllProducts()
         {
+            //_client.InvokeApiAsync<InventoryItem>("",null,)
             var table = _client.GetTable<InventoryItem>();
 
             var inventory = await table.ToListAsync();
