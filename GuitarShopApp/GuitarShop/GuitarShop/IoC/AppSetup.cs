@@ -26,8 +26,8 @@ namespace GuitarShop.IoC
             cb.RegisterType<ProductService>().As<IProductService>().SingleInstance();
             cb.RegisterType<UnitOfWork>().As<IUnitOfWork>().SingleInstance().WithParameter("sqlLite",DependencyService.Get<ISQLite>());
 
-            cb.RegisterType<InventoryFacade>().As<IInventoryFacade>().SingleInstance();
-            //cb.RegisterType<MockInventoryFacade>().As<IInventoryFacade>().SingleInstance();
+            //cb.RegisterType<InventoryFacade>().As<IInventoryFacade>().SingleInstance();
+            cb.RegisterType<MockInventoryFacade>().As<IInventoryFacade>().SingleInstance();
             cb.RegisterType<InventoryService>().As<IInventoryService>().SingleInstance();
             cb.RegisterType<ProductFavouriteRepository>().As<IRepository<Favourite, int>>().SingleInstance();
         }
