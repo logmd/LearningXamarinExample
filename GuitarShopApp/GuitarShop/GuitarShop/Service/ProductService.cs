@@ -129,7 +129,7 @@ namespace GuitarShop.Service
 
             try
             {
-                var product = await _inventory.GetProductByProductNumber(request.ProductNumber);
+                var product = await _inventory.GetProductById(request.ProductId);
                 response.Product = product.ConvertToProductDTOFromProduct();
             }
             catch (Exception ex)

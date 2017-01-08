@@ -8,6 +8,6 @@ namespace GuitarShop.Service.DataContracts.Requests
 {
     public class GetProductDetailsRequest
     {
-        public int ProductNumber { get; set; }
+        public string ProductId { get; set; }
     }
 }
