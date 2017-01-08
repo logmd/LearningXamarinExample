@@ -14,9 +14,9 @@ namespace GuitarShop.Service.ThirdParty
             _service = service;
         }
 
-        public Task<Product> GetProductByProductNumber(int productNumber)
+        public Task<Product> GetProductById(string productId)
         {
-            var item = _service.GetById(productNumber);
+            var item = _service.GetById(productId);
 
             return Task.FromResult(new Product
             {

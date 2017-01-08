@@ -8,7 +8,7 @@ namespace GuitarShop.Service.ThirdParty
 {
     public interface IInventoryService
     {
-        InventoryItem GetById(int id);
+        InventoryItem GetById(string id);
 
         IEnumerable<InventoryItem> GetAll();
     }

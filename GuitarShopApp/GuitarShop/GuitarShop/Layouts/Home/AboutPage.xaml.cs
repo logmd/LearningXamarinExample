@@ -3,6 +3,7 @@ using System.Linq;
 using Autofac;
 using GuitarShop.IoC;
 using GuitarShop.Layouts.Templates;
+using GuitarShop.Service;
 using GuitarShop.Service.DataContracts.Requests;
 using GuitarShop.Service.ServiceContract;
 using DependencyService = Xamarin.Forms.DependencyService;
@@ -26,14 +27,19 @@ namespace GuitarShop.Layouts.Home
 
             try
             {
-
+                
                 AppSetup setup = DependencyService.Get<AppSetup>();
 
                 var service = setup.Container.Resolve<IProductService>();
 
-                var result = await service.GetAllProducts(new GetAllProductsRequest());
+                var getProductRequest = new GetProductDetailsRequest()
+                {
+                    ProductId = "89347eb9e4fe4cef92960eb1cfba9724"
+                };
 
-                var product = result?.Products.First();
+                var result = await service.GetProductDetails(getProductRequest);
+
+                var product = result?.Product;
 
                 productName.Text = product?.Name;
                 productPrice.Text = product?.Price.ToString();
