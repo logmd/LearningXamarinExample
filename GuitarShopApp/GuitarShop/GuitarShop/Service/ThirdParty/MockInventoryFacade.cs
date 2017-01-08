@@ -7,16 +7,16 @@ namespace GuitarShop.Service.ThirdParty
 {
     public class MockInventoryFacade : IInventoryFacade
     {
-        public IInventoryService _service;
+        public IInventoryService Service;
 
         public MockInventoryFacade(IInventoryService service)
         {
-            _service = service;
+            Service = service;
         }
 
         public Task<Product> GetProductById(string productId)
         {
-            var item = _service.GetById(productId);
+            var item = Service.GetById(productId);
 
             return Task.FromResult(new Product
             {
@@ -32,7 +32,7 @@ namespace GuitarShop.Service.ThirdParty
 
         public Task<IEnumerable<Product>> GetAllProducts()
         {
-            return Task.FromResult(_service.GetAll()
+            return Task.FromResult(Service.GetAll()
                 .Select(i => new Product
                 {
                     ProductNumber = int.Parse(i.Id),
