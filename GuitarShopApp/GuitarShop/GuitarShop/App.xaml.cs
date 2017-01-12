@@ -23,6 +23,7 @@ namespace GuitarShop
             var setup = DependencyService.Get<AppSetup>();
             setup.CreateContainer();
             Container = setup.Container;
+            
         }
 
         //}
