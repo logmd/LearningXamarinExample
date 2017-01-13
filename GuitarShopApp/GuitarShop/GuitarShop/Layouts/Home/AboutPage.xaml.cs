@@ -32,14 +32,11 @@ namespace GuitarShop.Layouts.Home
 
                 var service = setup.Container.Resolve<IProductService>();
 
-                var getProductRequest = new GetProductDetailsRequest()
-                {
-                    ProductId = "89347eb9e4fe4cef92960eb1cfba9724"
-                };
+                var getProductRequest = new GetAllProductsRequest();
 
-                var result = await service.GetProductDetails(getProductRequest);
+                var result = await service.GetAllProducts(getProductRequest);
 
-                var product = result?.Product;
+                var product = result?.Products?.First();
 
                 productName.Text = product?.Name;
                 productPrice.Text = product?.Price.ToString();

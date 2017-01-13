@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<templates:DetailedContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:templates="clr-namespace:GuitarShop.Layouts.Templates;assembly=GuitarShop"
+             x:Class="GuitarShop.Layouts.Home.Browse.BrowsePage">
+  <ScrollView BackgroundColor="{StaticResource MSecondary200}">
+    <StackLayout>
+      <ContentView
+        BackgroundColor="{StaticResource MSecondary500}"
+        Padding="10">
+  <Label Text="Browse All Products:"
+       
+       FontSize="20"
+             
+       VerticalOptions="Center" HorizontalOptions="Center" />
+</ContentView>
+      <ListView  x:Name="AllProductsListView">
+<ListView.ItemTemplate>
+  <DataTemplate>
+    <ViewCell Height="200">
+      <StackLayout Orientation="Horizontal" MinimumHeightRequest="200" HorizontalOptions="Fill" BackgroundColor="{StaticResource MSecondary900}">
+        <Image Source="{Binding Image}" HorizontalOptions="End" AbsoluteLayout.LayoutBounds="250.25, 0.25, 50, 50 "/>
+
+        <StackLayout Orientation="Vertical">
+          <Label Text = "{Binding Name}" FontSize="18"/>
+          <Label Text = "{Binding Price}"/>
+        </StackLayout>
+      </StackLayout>
+    </ViewCell>
+  </DataTemplate>
+</ListView.ItemTemplate>
+      </ListView>
+    </StackLayout>
+  </ScrollView>
+</templates:DetailedContentPage>
