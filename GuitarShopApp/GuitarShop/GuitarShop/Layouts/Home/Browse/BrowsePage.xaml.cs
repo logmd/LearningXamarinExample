@@ -38,10 +38,6 @@ namespace GuitarShop.Layouts.Home.Browse
                 var result = await service.GetAllProducts(getProductRequest);
 
                 var products = result?.Products;
-
-                var listInView = AllProductsListView;
-
-                var lview = new ListView();
                 
                 var source = new ObservableCollection<ListProductDTO>();
 
