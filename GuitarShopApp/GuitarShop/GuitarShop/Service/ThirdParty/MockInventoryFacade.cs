@@ -40,7 +40,7 @@ namespace GuitarShop.Service.ThirdParty
                     Price = i.Price,
                     Quantity = i.Quantity,
                     Description = i.Description,
-                    //Features = i.Features,
+                    Features = i.Features,
                     ImageUrl = i.ImageUrl
                 }));
         }

@@ -25,6 +25,7 @@
           <StackLayout Padding="15" Spacing="10">
             <ContentView HeightRequest="150" MinimumHeightRequest="150" BackgroundColor="White">
               <StackLayout Padding="10">
+                
                 <Label TextColor="{StaticResource MPrimary900}" FontSize="15">Voted best this week!</Label>
                 <Label TextColor="{StaticResource MPrimary500}" LineBreakMode="WordWrap">
                   Sample Card Data for AA Guitar Shop 1

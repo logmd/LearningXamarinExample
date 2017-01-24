@@ -23,7 +23,7 @@ namespace GuitarShop.Service.Extensions
                 Image = ImageSource.FromUri(new Uri(product.ImageUrl))
             };
         }
-
+        
         public static ListProductDTO ConvertToListProductDTOFromProduct(this Product product)
         {
             return new ListProductDTO
@@ -32,6 +32,7 @@ namespace GuitarShop.Service.Extensions
                 Name = product.ProductName,
                 Price = product.Price,
                 Quantity = product.Quantity,
+                Features = string.Join("\r\n\r\n",product.Features.ToArray()),  
                 Image = ImageSource.FromUri(new Uri(product.ImageUrl))
             };
         }

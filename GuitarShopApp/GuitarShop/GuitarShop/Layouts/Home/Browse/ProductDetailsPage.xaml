@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<templates:DetailedContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:templates="clr-namespace:GuitarShop.Layouts.Templates;assembly=GuitarShop"
+             x:Class="GuitarShop.Layouts.Home.Browse.ProductDetailsPage">
+  <ScrollView BackgroundColor="#ffffff">
+    <StackLayout>
+      <ContentView
+        BackgroundColor="{StaticResource MPrimary500}"
+        Padding="50,10,10,10">
+        <Label Text=""
+               x:Name="ItemName"
+             TextColor="{StaticResource MPrimaryTextLight}"
+             FontSize="20"
+             VerticalOptions="Center" HorizontalOptions="Center" />
+      </ContentView>
+      <ContentView HeightRequest="300" MinimumHeightRequest="300">
+
+        <Image HorizontalOptions="Fill"
+               Aspect="AspectFill"
+      x:Name="ItemImage"
+               
+      ></Image>
+      </ContentView>
+      <ContentView MinimumHeightRequest="1000" HeightRequest="1000" Padding="20" BackgroundColor="{StaticResource MSecondary200}">
+        <StackLayout Spacing="20">
+          <ContentView BackgroundColor="#ffffff">
+            <StackLayout>
+              <ContentView Padding="20" BackgroundColor="{StaticResource MSecondary500}">
+                <Label FontSize="20" TextColor="{StaticResource MSecondaryTextLight}" Text="Features"></Label>
+              </ContentView>
+              <ContentView Padding="20">
+                <Label TextColor="{StaticResource MSecondary900}" x:Name="ItemFeatures" Text="SOME TEXT HERE"></Label>
+              </ContentView>
+            </StackLayout>
+
+          </ContentView>
+          <ContentView BackgroundColor="#ffffff">
+            <StackLayout>
+              <ContentView  Padding="20" BackgroundColor="{StaticResource MSecondary500}">
+                <Label FontSize="20" TextColor="{StaticResource MSecondaryTextLight}" Text="Shahead And Vitor Adult Section"></Label>
+              </ContentView>
+              <StackLayout Orientation="Horizontal">
+                <ContentView WidthRequest="150" MinimumWidthRequest="150" HeightRequest="200" MinimumHeightRequest="200" Padding="20" BackgroundColor="{StaticResource MSecondary500}">
+                  <Image x:Name="VitorImage" Aspect="AspectFill"></Image>
+                </ContentView>
+                <ContentView WidthRequest="150" MinimumWidthRequest="150"  HeightRequest="200" MinimumHeightRequest="200"  Padding="20">
+                  <Image x:Name="ShahedImage" Aspect="AspectFill"></Image>
+
+                </ContentView>
+              </StackLayout>
+
+            </StackLayout>
+          </ContentView>
+        </StackLayout>
+      </ContentView>
+    </StackLayout>
+  </ScrollView>
+</templates:DetailedContentPage>

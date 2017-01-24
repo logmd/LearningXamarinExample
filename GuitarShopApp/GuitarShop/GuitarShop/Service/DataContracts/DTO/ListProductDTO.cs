@@ -17,6 +17,8 @@ namespace GuitarShop.Service.DataContracts.DTO
 
         public int Quantity { get; set; }
 
+        public string Features { get; set; }
+
         public ImageSource Image { get; set; }
     }
 }

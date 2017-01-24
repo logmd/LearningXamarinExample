@@ -48,15 +48,31 @@ namespace GuitarShop.Layouts.Home.Browse
 
                 AllProductsListView.ItemsSource = source;
 
+                AllProductsListView.ItemSelected += OnSelection;
+
             }
             catch (Exception e)
             {
             }
         }
+
+        
+       private void OnSelection(object sender, SelectedItemChangedEventArgs e)
+       {
+           var item = e.SelectedItem as ListProductDTO;
+           if (item == null) return; //ItemSelected is called on deselection, which results in SelectedItem being set to null
+
+            var mainPage = new ProductDetailsPage(item);
+            NavigationPage.SetHasBackButton(mainPage,true);
+            Navigation.PushAsync(mainPage);
+
+       }
     }
 
     public class ProductViewModel
     {
         public string Name { get; set; }
     }
+
+
 }
