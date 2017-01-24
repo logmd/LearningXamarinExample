@@ -28,13 +28,14 @@
           <ColumnDefinition Width="*"></ColumnDefinition>
           <ColumnDefinition Width="*"></ColumnDefinition>
           <ColumnDefinition Width="*"></ColumnDefinition>
+          
         </Grid.ColumnDefinitions>
         
         <ContentView Grid.Row="0" Grid.ColumnSpan="2" VerticalOptions="Fill">
           <Image Source="{Binding Image}" HorizontalOptions="End" Aspect="AspectFit" />
         </ContentView>
         
-        <StackLayout  Grid.Row="0" Grid.ColumnSpan="3" Grid.Column="2" Orientation="Vertical">
+        <StackLayout   Grid.Row="0" Grid.ColumnSpan="3" Grid.Column="2" Orientation="Vertical">
           <Label TextColor="{StaticResource MPrimary500}" Text = "{Binding Name}" FontSize="18"/>
           <Label TextColor="{StaticResource MSecondary500}" Text = "{Binding Price}"/>
         </StackLayout>

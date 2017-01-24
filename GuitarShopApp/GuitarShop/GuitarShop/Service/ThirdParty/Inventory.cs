@@ -65,15 +65,15 @@ namespace GuitarShop.Service.ThirdParty
             };
 
 
-            for (int i = 0; i < 10; i++)
+            for (int i = 3; i < 13; i++)
             {
-               list.Add(GenerateInventoryItem());
+               list.Add(GenerateInventoryItem(i));
             }
 
             return list;
         }
 
-        private static InventoryItem GenerateInventoryItem()
+        private static InventoryItem GenerateInventoryItem(int id)
         {
             var ran = new Random();
 
@@ -81,7 +81,7 @@ namespace GuitarShop.Service.ThirdParty
 
             var item = new InventoryItem
             {
-                Id = next.Invoke(ran).ToString(),
+                Id = id.ToString(),
                 Name = "Ibanez " + next.Invoke(ran),
                 Description =
                     "The new RGD Iron Label series offers a new type of body construction, never before featured on a RGD model. " +
