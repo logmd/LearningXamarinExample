@@ -3,7 +3,7 @@
 <ScrollView> 
   	<StackLayout>
 		<ContentView HeightRequest="300" BackgroundColor="White">
-			<StackLayout>
+			<StackLayout >
 				<StackLayout.Margin>
 					<!--platform based targeting-->
 					<OnPlatform x:TypeArguments="Thickness">
@@ -33,11 +33,11 @@
             <RelativeLayout>
               <Button Text="Confirm" >
                 <Button.TextColor>
-                <OnPlatform x:TypeArguments="Color" Android="#C8E6C9" iOS="#5856D6"/>
+                <OnPlatform x:TypeArguments="Color" Android="#C8E6C9"/>
                   
                 </Button.TextColor>
                 <Button.BackgroundColor>
-                <OnPlatform x:TypeArguments="Color" Android="#4CAF50" iOS="#ffffff"/>
+                <OnPlatform x:TypeArguments="Color" Android="#4CAF50"/>
                   
                 </Button.BackgroundColor>
               </Button>
